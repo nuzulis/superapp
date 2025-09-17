@@ -10,7 +10,11 @@ import {
 
 export default function SDM() {
   const menus = [
-    { name: "Rekap Absensi", path: "/sdm/pegawai", icon: UserGroupIcon },
+    {
+      name: "Rekap Absensi",
+      path: "https://epresensi.karantinaindonesia.go.id",
+      icon: UserGroupIcon,
+    },
     {
       name: "Perhitungan Tukin, UM, Lembur",
       path: "/sdm/presensi",
@@ -32,20 +36,40 @@ export default function SDM() {
         <p className="mb-8 text-white/80">Pilih menu keuangan:</p>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-6">
-          {menus.map((menu, idx) => (
-            <Link
-              key={idx}
-              to={menu.path}
-              className="flex flex-col items-center justify-center p-6 rounded-xl 
-                 bg-white/95 shadow-md hover:bg-yellow-50 hover:scale-105 
-                 transition duration-200"
-            >
-              <menu.icon className="w-12 h-12 text-blue-600 mb-3" />
-              <span className="text-lg sm:text-xl font-semibold text-gray-800 text-center">
-                {menu.name}
-              </span>
-            </Link>
-          ))}
+          {menus.map((menu, idx) => {
+            const MenuIcon = menu.icon; // harus huruf besar biar bisa dipakai sebagai komponen
+            const isExternal = menu.path.startsWith("http");
+
+            return isExternal ? (
+              <a
+                key={idx}
+                href={menu.path}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex flex-col items-center justify-center p-6 rounded-xl 
+                   bg-white/95 shadow-md hover:bg-yellow-50 hover:scale-105 
+                   transition duration-200"
+              >
+                <MenuIcon className="w-12 h-12 text-blue-600 mb-3" />
+                <span className="text-lg sm:text-xl font-semibold text-gray-800 text-center">
+                  {menu.name}
+                </span>
+              </a>
+            ) : (
+              <Link
+                key={idx}
+                to={menu.path}
+                className="flex flex-col items-center justify-center p-6 rounded-xl 
+                   bg-white/95 shadow-md hover:bg-yellow-50 hover:scale-105 
+                   transition duration-200"
+              >
+                <MenuIcon className="w-12 h-12 text-blue-600 mb-3" />
+                <span className="text-lg sm:text-xl font-semibold text-gray-800 text-center">
+                  {menu.name}
+                </span>
+              </Link>
+            );
+          })}
         </div>
       </div>
     </div>
