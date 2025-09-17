@@ -29,7 +29,7 @@ export default function SDM() {
     },
     {
       name: "Peng-SPJ-an",
-      path: "/sdm/spj",
+      path: "https://lemon-water-0499f3e00.2.azurestaticapps.net/",
       icon: TrophyIcon,
     },
     {

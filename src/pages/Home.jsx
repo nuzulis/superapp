@@ -39,7 +39,7 @@ export default function Home() {
         </svg>
       </div>
 
-      {/* Header Logo */}
+      {/* Header */}
       <Header />
 
       {/* Hero Section */}
@@ -52,8 +52,8 @@ export default function Home() {
             Badan Karantina Indonesia
           </p>
 
-          {/* Launcher AppCard */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-10 mt-16 justify-items-center w-full">
+          {/* App Cards Grid */}
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-10 mt-16 justify-items-center w-full">
             <AppCard
               title="e-Presensi"
               tooltip="Absensi online pegawai"
@@ -64,11 +64,11 @@ export default function Home() {
                 )
               }
             >
-              <div className="w-24 h-24 sm:w-28 sm:h-28 p-5 rounded-2xl bg-gradient-to-tr from-blue-400 to-cyan-400 flex items-center justify-center shadow-lg transition-transform duration-300 hover:scale-110">
+              <div className="w-16 h-16 sm:w-28 sm:h-28 p-2 sm:p-5 rounded-2xl bg-gradient-to-tr from-blue-400 to-cyan-400 flex items-center justify-center shadow-lg transition-transform duration-300 hover:scale-110">
                 <img
                   src={epresensiIcon}
                   alt="e-Presensi"
-                  className="w-full h-full object-contain"
+                  className="w-3/4 h-3/4 sm:w-full sm:h-full object-contain"
                 />
               </div>
             </AppCard>
@@ -78,11 +78,11 @@ export default function Home() {
               to="/kepegawaian"
               tooltip="Data & layanan kepegawaian"
             >
-              <div className="w-24 h-24 sm:w-28 sm:h-28 p-5 rounded-2xl bg-gradient-to-tr from-purple-400 to-cyan-400 flex items-center justify-center shadow-lg transition-transform duration-300 hover:scale-110">
+              <div className="w-16 h-16 sm:w-28 sm:h-28 p-2 sm:p-5 rounded-2xl bg-gradient-to-tr from-purple-400 to-cyan-400 flex items-center justify-center shadow-lg transition-transform duration-300 hover:scale-110">
                 <img
                   src={kepegawaianIcon}
                   alt="Kepegawaian"
-                  className="w-full h-full object-contain"
+                  className="w-3/4 h-3/4 sm:w-full sm:h-full object-contain"
                 />
               </div>
             </AppCard>
@@ -92,11 +92,11 @@ export default function Home() {
               to="/keuangan"
               tooltip="Pengelolaan keuangan & anggaran"
             >
-              <div className="w-24 h-24 sm:w-28 sm:h-28 p-5 rounded-2xl bg-gradient-to-tr from-yellow-400 to-orange-400 flex items-center justify-center shadow-lg transition-transform duration-300 hover:scale-110">
+              <div className="w-16 h-16 sm:w-28 sm:h-28 p-2 sm:p-5 rounded-2xl bg-gradient-to-tr from-yellow-400 to-orange-400 flex items-center justify-center shadow-lg transition-transform duration-300 hover:scale-110">
                 <img
                   src={keuanganIcon}
                   alt="Keuangan"
-                  className="w-full h-full object-contain"
+                  className="w-3/4 h-3/4 sm:w-full sm:h-full object-contain"
                 />
               </div>
             </AppCard>
@@ -111,11 +111,11 @@ export default function Home() {
                 )
               }
             >
-              <div className="w-24 h-24 sm:w-28 sm:h-28 p-5 rounded-2xl bg-gradient-to-tr from-cyan-400 to-blue-500 flex items-center justify-center shadow-lg transition-transform duration-300 hover:scale-110">
+              <div className="w-16 h-16 sm:w-28 sm:h-28 p-2 sm:p-5 rounded-2xl bg-gradient-to-tr from-cyan-400 to-blue-500 flex items-center justify-center shadow-lg transition-transform duration-300 hover:scale-110">
                 <img
                   src={perencanaanIcon}
                   alt="Perencanaan"
-                  className="w-full h-full object-contain"
+                  className="w-3/4 h-3/4 sm:w-full sm:h-full object-contain"
                 />
               </div>
             </AppCard>
