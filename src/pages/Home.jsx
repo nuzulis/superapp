@@ -103,7 +103,6 @@ export default function Home() {
 
             <AppCard
               title="Perencanaan"
-              to="#"
               tooltip="Perencanaan"
               onClick={() =>
                 window.open(
