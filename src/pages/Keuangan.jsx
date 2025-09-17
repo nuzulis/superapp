@@ -37,37 +37,24 @@ export default function SDM() {
 
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-6">
           {menus.map((menu, idx) => {
-            const MenuIcon = menu.icon; // harus huruf besar biar bisa dipakai sebagai komponen
+            const MenuIcon = menu.icon;
             const isExternal = menu.path.startsWith("http");
 
-            return isExternal ? (
-              <a
+            return (
+              <div
                 key={idx}
-                href={menu.path}
-                target="_blank"
-                rel="noopener noreferrer"
+                onClick={() => {
+                  if (isExternal) window.open(menu.path, "_blank");
+                }}
                 className="flex flex-col items-center justify-center p-6 rounded-xl 
-                   bg-white/95 shadow-md hover:bg-yellow-50 hover:scale-105 
-                   transition duration-200"
+                 bg-white/95 shadow-md hover:bg-yellow-50 hover:scale-105 
+                 transition duration-200 cursor-pointer"
               >
                 <MenuIcon className="w-12 h-12 text-blue-600 mb-3" />
                 <span className="text-lg sm:text-xl font-semibold text-gray-800 text-center">
                   {menu.name}
                 </span>
-              </a>
-            ) : (
-              <Link
-                key={idx}
-                to={menu.path}
-                className="flex flex-col items-center justify-center p-6 rounded-xl 
-                   bg-white/95 shadow-md hover:bg-yellow-50 hover:scale-105 
-                   transition duration-200"
-              >
-                <MenuIcon className="w-12 h-12 text-blue-600 mb-3" />
-                <span className="text-lg sm:text-xl font-semibold text-gray-800 text-center">
-                  {menu.name}
-                </span>
-              </Link>
+              </div>
             );
           })}
         </div>
