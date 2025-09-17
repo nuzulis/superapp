@@ -6,6 +6,8 @@ import {
   CalendarDaysIcon,
   BanknotesIcon,
   TrophyIcon,
+  CurrencyDollarIcon,
+  DocumentTextIcon,
 } from "@heroicons/react/24/solid";
 
 export default function SDM() {
@@ -25,9 +27,22 @@ export default function SDM() {
       path: "/sdm/diklat",
       icon: BanknotesIcon,
     },
-    { name: "SPJ", path: "/sdm/kinerja", icon: TrophyIcon },
+    {
+      name: "Peng-SPJ-an",
+      path: "/sdm/spj",
+      icon: TrophyIcon,
+    },
+    {
+      name: "Realisasi PNBP",
+      path: "/sdm/pnbp",
+      icon: CurrencyDollarIcon,
+    },
+    {
+      name: "POK",
+      path: "/sdm/pok",
+      icon: DocumentTextIcon,
+    },
   ];
-
   return (
     <div className="px-8 pt-2 pb-8 min-h-screen bg-gradient-to-tr from-cyan-600 via-sky-700 to-indigo-800">
       <Header />
