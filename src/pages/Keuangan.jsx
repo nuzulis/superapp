@@ -28,7 +28,7 @@ export default function SDM() {
       icon: BanknotesIcon,
     },
     {
-      name: "Peng-SPJ-an",
+      name: "Pertanggungjawaban Anggaran",
       path: "https://lemon-water-0499f3e00.2.azurestaticapps.net/",
       icon: TrophyIcon,
     },
